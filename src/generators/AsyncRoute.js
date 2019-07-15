@@ -1,6 +1,9 @@
 const AsyncRoute = (Component, key, reducers, sagas) => store => {
   store.injectReducers(key, reducers);
-  store.saga.run(key, sagas);
+
+  if (typeof sagas !== 'undefined') {
+    store.sagaRun(key, sagas);
+  }
 
   return Component;
 };
