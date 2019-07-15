@@ -1,5 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies, no-console */
-
 const path = require('path');
 const express = require('express');
 const fs = require('fs');

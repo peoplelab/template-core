@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 const { HotModuleReplacementPlugin } = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
