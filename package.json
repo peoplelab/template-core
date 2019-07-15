@@ -5,6 +5,72 @@
   "main": "./src/index.js",
   "repository": "git@github.com:peoplelab/template-core.git",
   "author": "peoplelab",
+  "scripts": {
+    "build:dev": "better-npm-run build:dev",
+    "build:system": "better-npm-run build:system",
+    "build:prod": "better-npm-run build:prod",
+    "lint": "eslint **/*.js?(x)",
+    "lint:fix": "eslint --fix **/*.js?(x)",
+    "start:mocks": "better-npm-run start:mocks",
+    "start": "better-npm-run start:dev",
+    "start:staging": "better-npm-run start:staging",
+    "start:system": "better-npm-run start:system",
+    "stylelint": "stylelint **/*.scss",
+    "stylelint:fix": "stylelint --fix **/*.scss"
+  },
+  "betterScripts": {
+    "build:dev": {
+      "command": "webpack --progress --colors",
+      "env": {
+        "BABEL_ENV": "dev",
+        "NODE_ENV": "DEVELOPMENT",
+        "COMPILE": "COMPILE"
+      }
+    },
+    "build:system": {
+      "command": "webpack --progress --colors",
+      "env": {
+        "BABEL_ENV": "prod",
+        "NODE_ENV": "SYSTEM"
+      }
+    },
+    "build:prod": {
+      "command": "webpack --progress --colors --optimize-minimize",
+      "env": {
+        "BABEL_ENV": "prod",
+        "NODE_ENV": "PRODUCTION",
+        "COMPILE": "COMPILE"
+      }
+    },
+    "start:mocks": {
+      "command": "node ./server/main.js",
+      "env": {
+        "BABEL_ENV": "dev",
+        "NODE_ENV": "MOCKS"
+      }
+    },
+    "start:dev": {
+      "command": "node ./server/main.js",
+      "env": {
+        "BABEL_ENV": "dev",
+        "NODE_ENV": "DEVELOPMENT"
+      }
+    },
+    "start:staging": {
+      "command": "node ./server/main.js",
+      "env": {
+        "BABEL_ENV": "prod",
+        "NODE_ENV": "STAGING"
+      }
+    },
+    "start:system": {
+      "command": "node ./server/main.js",
+      "env": {
+        "BABEL_ENV": "prod",
+        "NODE_ENV": "SYSTEM"
+      }
+    }
+  },
   "dependencies": {
     "@hot-loader/react-dom": "16.8.6",
     "prop-types": "15.7.2",
