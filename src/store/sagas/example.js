@@ -1,7 +1,7 @@
 import {
-  all, put, takeEvery, fork,
+  put, takeEvery, fork,
 } from 'redux-saga/effects';
-import { types } from './actions';
+import { types } from '../actions/example';
 
 
 function* doAction() {
@@ -15,13 +15,6 @@ function* watchAction() {
 }
 
 
-const sagasList = [
+export default [
   fork(watchAction),
 ];
-
-function* rootSagas() {
-  yield all(sagasList);
-}
-
-
-export default rootSagas;

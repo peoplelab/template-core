@@ -8,7 +8,7 @@ const createRoutes = store => ({
       path: '/',
       key: 'home',
       exact: true,
-      component: Home(store),
+      component: Home,
     },
     {
       path: '/async',

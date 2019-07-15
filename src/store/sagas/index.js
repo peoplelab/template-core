@@ -1,11 +1,10 @@
 import { all } from 'redux-saga/effects';
-// import Sagas from './path';
+import Sagas from './example';
 
 
 const sagasList = [
-  // ...Sagas,
+  ...Sagas,
 ];
-
 
 function* rootSagas() {
   yield all(sagasList);

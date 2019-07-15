@@ -1,8 +1,8 @@
-// import Reducer from './path';
+import Reducers from './example';
 
 
 export const mainReducer = {
-  // Reducer
+  Reducers
 };
 
 

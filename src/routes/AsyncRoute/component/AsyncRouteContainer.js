@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom'; // only for route components
 import AsyncRoute from './AsyncRouteView';
-import { actionCreator } from '../modules/actions';
+import { actionCreator } from '../controllers/actions';
 
 
 const mapDispatchToProps = {
