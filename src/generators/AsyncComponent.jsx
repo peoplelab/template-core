@@ -13,7 +13,7 @@ const AsyncComponent = store => importComponent => (
         let Component = component.default;
 
         if (typeof store !== 'undefined') {
-          Component(store);
+          Component = Component(store);
         }
 
         this.setState({ Component });
@@ -21,7 +21,7 @@ const AsyncComponent = store => importComponent => (
     }
 
     render() {
-      const { Component } = this.state;
+      let { Component } = this.state;
 
       return Component ? <Component {...this.props} /> : null;
     }
