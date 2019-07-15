@@ -3,9 +3,7 @@
 
 A template core for React project
 
-## Folders tree
-
-### "Root"
+## Folders
 Contain the core of the project configuration files
 
 ### config
@@ -18,46 +16,45 @@ Contain the public resources as favicon or pdf documents
 Contain the node server implementation to run on localhost
 
 ### src
-#### "Root"
 Contain the project root files
-* index.hmtl
+* index.html
 * index.js
 
-#### api
+#### src/api
 Contain all functions to handle the api calls
 
-#### components
+#### src/components
 Contain all the common React components of the project
 
-#### containers
+#### src/containers
 Contain the core of the app and the handlers of routes and authentication
 
-#### generators
+#### src/generators
 Contain all reusable code used to create other functions or classes
 
-#### routes
+#### src/routes
 Contain all the project async routes (only the "Home" component should be sync) and the relative store controllers
 
-#### store
+#### src/store
 Contain all the store configuration and the global store controllers
 
-#### style
+#### src/style
 Contain the common styles settings and the scss global variables
 
-#### template
+#### src/template
 Contain the components to set the common routes layout
 
-#### tools
+#### src/tools
 Contain generic and reusable code to set variables or objects
 
-#### utils
+#### src/utils
 Contain specific and reusable code to set variables or objects
 
 ## Files organization
 ### Component
 * [name]
 	* index.js
-	* [name].container.js
+	* [name].container.js (optional)
 	* [name].style.js
 	* [name].view.jsx
 
