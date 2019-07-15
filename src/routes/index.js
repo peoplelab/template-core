@@ -1,4 +1,4 @@
-// import AsyncComponent from '../generators/AsyncComponent';
+import AsyncComponent from '../generators/AsyncComponent';
 import Home from './Home';
 
 
@@ -10,12 +10,12 @@ const createRoutes = store => ({
       exact: true,
       component: Home(store),
     },
-    // {
-    //   path: '/path',
-    //   key: 'route-key',
-    //   exact: true,
-    //   component: AsyncComponent(store)(() => import(/* webpackChunkName: "ChunkName" */ './RouteName')),
-    // },
+    {
+      path: '/async',
+      key: 'async-key',
+      exact: true,
+      component: AsyncComponent(store)(() => import(/* webpackChunkName: "AsyncChunk" */ './AsyncRoute')),
+    },
   ],
   // secondary
   // logged
